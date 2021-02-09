@@ -7,7 +7,7 @@ export default function App() {
       <div className="container">
    
 <Weather />
-<footer> Project completed by Leigh Richards and is {" "}
+<footer> This project was completed by Leigh Richards and is {" "}
      <a href="https://github.com/Winifreddo/final-project" target="_blank">
         open-Sourced on GitHub
      </a>
