@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import axios from "axios";
 import FormatDate from "./FormatDate";
 import FormatTime from "./FormatTime";
-
+import WeatherData from "./WeatherData";
 import "./Weather.css";
 export default function Weather (props) {
 
@@ -33,45 +33,8 @@ if (loaded) {
       </div>
        </div> 
        </form>
-        
-        <div className="information">
-        <div className="row mt-3">
-            <div className="col-6">    
-            <h1>{props.defaultCity}</h1>
-             <ul> 
-            <li> <FormatDate date={weather.date}  /></li>
-            <li><FormatTime date={weather.date} /></li>
-        </ul>
+        <WeatherData data={weather} />
         </div>
-        <div className="col-6">   
-        <div className="clearfix"> 
-        <img src={weather.image} alt={weather.description} className="float-left" />
-        <div className="float-left">
-        <span className="temperature">{Math.round(weather.temperature)}</span> 
-        <span classname="unit">°C | °F </span>
-        </div>
-        </div>
-         </div>
-        </div>
-</div>
-<div className="data">
-    <div classname="row">
-<div className="col-6">   <div className="Properties">
-                          <ul> 
-                         <li className="text-capitalize"> Description: {weather.description}</li>
-                   <li> Humidity: {weather.humidity}%</li>
-                  <li>  Wind: {Math.round(weather.wind)} km/h</li>
-                  </ul> 
-                  </div>
-                  </div>
-                  </div>
-                  </div>
-
-
-
-        </div>
-        
-        
     );
 
 } else {
