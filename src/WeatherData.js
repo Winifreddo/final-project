@@ -2,6 +2,7 @@ import React from "react";
 import FormatDate from "./FormatDate";
 import FormatTime from "./FormatTime";
 import Weather from "./Weather";
+import WeatherConversion from "./WeatherConversion";
 import "./weatherData.css";
 export default function WeatherData(props) {
   return (
@@ -19,8 +20,8 @@ export default function WeatherData(props) {
     <div className="clearfix"> 
     <img src={props.data.image} alt={props.data.description} className="float-left" />
     <div className="float-left">
-    <span className="temperature">{Math.round(props.data.temperature)}</span> 
-    <span classname="unit">°C | °F </span>
+      <WeatherConversion celsius= {props.data.temperature} />
+
     </div>
     </div>
      </div>
