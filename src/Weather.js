@@ -3,6 +3,8 @@ import axios from "axios";
 import FormatDate from "./FormatDate";
 import FormatTime from "./FormatTime";
 import WeatherData from "./WeatherData";
+import WeatherForecast from "./WeatherForecast";
+import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
 export default function Weather (props) {
 
@@ -16,7 +18,7 @@ function handleWeather (response) {
         wind: response.data.wind.speed,
         humidity: response.data.main.humidity,
         description: response.data.weather[0].description,
-        image: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
+        icon: response.data.weather[0].icon,
         date: new Date(response.data.dt*1000),
         city: response.data.name,
     });
@@ -55,6 +57,7 @@ if (loaded) {
        </div> 
        </form>
         <WeatherData data={weather} />
+        <WeatherForecast city={weather.city}/>
         </div>
     );
 

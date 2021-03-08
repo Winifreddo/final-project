@@ -4,6 +4,7 @@ import FormatTime from "./FormatTime";
 import Weather from "./Weather";
 import WeatherConversion from "./WeatherConversion";
 import "./weatherData.css";
+import WeatherIcon from "./WeatherIcon";
 export default function WeatherData(props) {
   return (
       <div className="Weatherinfo">
@@ -17,12 +18,17 @@ export default function WeatherData(props) {
     </ul>
     </div>
     <div className="col-6">   
-    <div className="clearfix"> 
-    <img src={props.data.image} alt={props.data.description} className="float-left" />
-    <div className="float-left">
+    <div className="clearfix">  
+     <div className="float-left">
+      <span classname="temperature">
       <WeatherConversion celsius= {props.data.temperature} />
-
+</span>
     </div>
+    <div classname="float-left">
+    <WeatherIcon code={props.data.icon} />
+    </div>
+
+  
     </div>
      </div>
     </div>

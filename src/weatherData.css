@@ -4,3 +4,7 @@
     margin-bottom: 0;
     margin-left: 37px;
 }
+
+.Weather canvas {
+    margin-left: 10px;
+}
