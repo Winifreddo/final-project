@@ -1,4 +1,23 @@
 
-.WeatherForecast {
-    color: black;
+ .WeatherTemperature {
+    color: white;
+    text-align: center;
 }
+
+.WeatherForecast {
+    text-align: center;
+}
+
+.WeatherForecast canvas {
+    display: block;
+    width: 40px;
+    height: 40px;
+
+}
+
+.info {
+    border: 1px solid #c7c0c0;
+    border-radius: 60px;
+    background-color: #83C5BE;
+    padding: 10px 10px;
+  }

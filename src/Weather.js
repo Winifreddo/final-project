@@ -6,6 +6,7 @@ import WeatherData from "./WeatherData";
 import WeatherForecast from "./WeatherForecast";
 import WeatherIcon from "./WeatherIcon";
 import "./Weather.css";
+
 export default function Weather (props) {
 
     let [weather, setWeather]=useState ({});
@@ -57,7 +58,7 @@ if (loaded) {
        </div> 
        </form>
         <WeatherData data={weather} />
-        <WeatherForecast city={weather.city}/>
+        <WeatherForecast city={weather.city} />
         </div>
     );
 
